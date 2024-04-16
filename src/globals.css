@@ -1,0 +1,127 @@
+body {
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  background: linear-gradient(45deg, #000, #444, #ff8c00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s infinite;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body::before {
+  content: 't';
+  position: absolute;
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.1);
+  animation: textAnimation 10s infinite;
+}
+
+body::after {
+  font-size: 3em;
+  color: #fff; /* White text color for contrast */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    color: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    color: rgba(255, 255, 255, 1);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.todoapp {
+  background: linear-gradient(45deg, #000, #444, #ff8c00);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+
+.input-container button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #45a049;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-item label {
+  flex: 1;
+  font-size: 16px;
+  color: #fff; /* White text color for contrast */
+}
+
+.todo-item button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-item button:hover {
+  background-color: #2e1b1b;
+}
